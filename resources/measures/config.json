@@ -1,0 +1,29 @@
+{
+	"type": "Collection",
+	"properties": {
+		"sensor": {
+			"name": "sensor",
+			"type": "string",
+			"typeLabel": "string",
+			"required": true,
+			"id": "sensor",
+			"order": 0
+		},
+		"timestamp": {
+			"name": "timestamp",
+			"type": "string",
+			"typeLabel": "string",
+			"required": true,
+			"id": "timestamp",
+			"order": 1
+		},
+		"value": {
+			"name": "value",
+			"type": "string",
+			"typeLabel": "string",
+			"required": true,
+			"id": "value",
+			"order": 2
+		}
+	}
+}

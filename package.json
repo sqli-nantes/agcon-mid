@@ -1,0 +1,17 @@
+{
+  "name": "agcon-mid",
+  "version": "0.0.1",
+  "description": "agcon middleware",
+  "main": "app.js",
+  "dependencies": {
+    "mongodb": "latest",
+    "amqplib": "latest",
+    "deployd":"latest"
+  },
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "dbatiot",
+  "license": "TBD"
+}
