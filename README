@@ -1,0 +1,5 @@
+Quick try of in one docker host of:
+
+a mqtt client writing to mongodb
+a deployd baas service to expose a REST API
+an apollo mqtt brocker

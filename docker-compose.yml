@@ -1,0 +1,19 @@
+apollo:
+    image: themerius/apache-apollo
+    restart: always
+    ports:
+        - "8080:61680"
+        - "5672:61613"
+#On mappe les ports sur des ports standard ouvert depuis le réseau interne
+#61680 webadminport ->8080
+#61613 mqtt port -> 5672 (normalement amqp)
+#3000 deployd -> 80
+web:
+  build: .
+  restart: always
+  environment:
+    - DEPLOYD_ENV=development  
+  ports:
+    - "80:3000"
+  links:
+    - apollo
