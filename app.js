@@ -34,7 +34,7 @@ var options = {
   clientId: 'mqttjs_' + Math.random().toString(16).substr(2, 8),
   username: 'admin',
   password: 'password',
-  connectTimeout: 240
+  connectTimeout: 120000
 };
 
 console.log("mqtt.connect url " + url + " options ", options);
@@ -43,6 +43,11 @@ console.log("mqtt.connect url " + url + " options ", options);
 var client = mqtt.connect(url, options);
 client.on('error', function(error) { // Emitted when the client cannot connect (i.e. connack rc != 0) or when a parsing error occurs.
     console.error("Mqtt client cannot connect",error);
+    setTimeout(function() {
+        console.log('Mqtt client  retry');
+            client = mqtt.connect(url, options);
+    }, 60000);
+
 });
 client.on('connect', function() { // When connected
   // subscribe to a topic
